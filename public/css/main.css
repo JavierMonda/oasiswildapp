@@ -1,0 +1,314 @@
+@font-face {
+  font-family: 'MikadoBold';
+  font-style: normal;
+  font-weight: 400;
+  src: local('MikadoBold'),
+  url(../fonts/Mikado/MikadoBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'MikadoLight';
+  font-style: normal;
+  font-weight: 400;
+  src: local('MikadoLight'),
+  url(../fonts/Mikado/MikadoLight.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'MikadoMedium';
+  font-style: normal;
+  font-weight: 400;
+  src: local('MikadoMedium'),
+  url(../fonts/Mikado/MikadoMedium.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'MikadoRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('MikadoRegular'),
+  url(../fonts/Mikado/MikadoRegular.otf) format('opentype');
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body, p {
+  font-family: 'MikadoLight';
+}
+h1 {
+  font-family: 'MikadoBold';
+}
+
+
+.masthead {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.masthead h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.card-deck {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bandera {
+  width:150px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 10px 10px 10px 10px;
+  margin:5px;
+}
+
+.logo {
+  width: 300px;
+  margin-bottom: 40px;
+}
+
+.checkeable input {
+  display: none;
+}
+.checkeable img {
+  width: 75px;
+  border: 5px solid transparent;
+}
+.checkeable input {
+  display: none;
+}
+.checkeable input:checked  + img {
+  border-color: blue;
+}
+.img-restaurante {
+  max-width: 100%;
+}
+.img-restaurante-nombre {
+  max-width: 80%;
+}
+.div-texto-centrado {
+  max-width: 400px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.h3-texto-centrado {
+    position: absolute;
+    text-align: center;
+    padding-top: 30%;
+    left: 50%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+}
+.encuestas-index {
+  padding-bottom: 50px;
+}
+.link-restaurante {
+  text-decoration: none;
+  font-family: 'MikadoBold';
+}
+
+table {
+  width: 100%;
+  margin: 20px auto;
+  table-layout: fixed;
+}
+.div-restauranteOasis {
+  background-image: url('/img/restauranteOasis.jpg');
+}
+.div-restauranteLeones {
+  background-image: url('/img/restauranteLeones.jpg');
+}
+.div-restaurantePatio {
+  background-image: url('/img/restaurantePatio.jpg');
+}
+
+/* card Box */
+
+.h3-card {
+  color: black;
+  font-family: 'MikadoBold';
+  text-align: center;
+  margin: 0 0 5% 0;
+  padding: 0.5em;
+  margin: 0 0 5% 0;
+}
+.p-card {
+  font-family: 'MikadoLight';
+}
+.boxesContainer {
+  padding-bottom: 5%;
+}
+.cardBox {
+  border: 0px solid;
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 31.7%;
+  padding-bottom: 5%;
+}
+
+.cardBox:hover .card {
+  transform: rotateY( 180deg);
+}
+
+.card {
+  background: white;
+  border: 0px solid;
+  cursor: default;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+
+.card p {
+  margin-bottom: 1.8em;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: black;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.card .front strong {
+  background: #fff;
+  border-radius: 100%;
+  color: #222;
+  font-size: 1.5em;
+  line-height: 30px;
+  padding: 0 7px 4px 6px;
+}
+
+.card .back {
+  transform: rotateY( 180deg);
+  border: 1px #8E1010 solid;
+}
+
+.card .back a {
+  padding: 0.3em 0.5em;
+  background: #8E1010;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1px;
+  font-size: 0.9em;
+  transition: all 0.2s ease 0s;
+}
+
+.card .back a:hover {
+  background: #1BC2EF;
+  color: #333;
+  text-shadow: 0 0 1px #333;
+}
+
+.cardBox:nth-child(1) .card .back {
+  background: transparent;
+  /*background: #8E1010;
+  background-image: url('/img/restauranteOasis.jpg');
+  background-repeat: no-repeat;*/
+}
+
+.cardBox:nth-child(2) .card .back {
+  background: transparent;
+  /*background-image: url('/img/restauranteLeones.jpg');
+  background-repeat: no-repeat;*/
+}
+
+.cardBox:nth-child(3) .card .back {
+  background: transparent;
+  /*background-image: url('/img/restaurantePatio.jpg');
+  background-repeat: no-repeat;*/
+}
+
+.cardBox:nth-child(2) .card {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+  -webkit-animation: giro 2s 1;
+  animation: giro 2s 1;
+}
+
+@-webkit-keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 46%;
+  }
+  .card {
+    height: 285px;
+  }
+  .cardBox:last-child {
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardBox {
+    width: 94.5%;
+  }
+  .card {
+    height: 260px;
+  }
+}
+#age {
+  display: none;
+}
+#conditionChild {
+  display: none;
+}
+#type-number {
+  width: 5em;
+}
+#p-conditions {
+  font-size: 10px;
+}
